@@ -78,7 +78,9 @@ def write_file(jpgh, pdfh, fh):
 
 
 def main(args):
-    parser = argparse.ArgumentParser(description='Process some integers.')
+    parser = argparse.ArgumentParser(
+        description='Make a polyglot file out of a JPEF and a PDF.'
+    )
     parser.add_argument(
         '--pdf',
         required=True,
