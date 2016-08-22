@@ -3,8 +3,8 @@
 Here will be published PoCs of polyglot files generation scripts as described in
 poc||gtfo (https://www.alchemistowl.org/pocorgtfo/)
 
-I will work at my own pace, on my own time, do not expect release any time soon,
-if any.
+I will work at my own pace, on my own time, do not expect a release any time
+soon, if any.
 
 However, feel free to contribute, fork, complete, change, distribute, whatever..
 
