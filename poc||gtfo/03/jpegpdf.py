@@ -64,8 +64,13 @@ def write_file(jpgh, pdfh, fh):
     )
 
     # Write picture data
+    last = b""
     for bs in read_chunk(jpgh, 0x200):
         fh.write(bs)
+        last = last + bs
+        last = last[-2:]
+
+    assert(last == b"\xFF\xD9")
 
     # Ending dummy object
     fh.write(
@@ -102,8 +107,6 @@ def main(args):
 
     args.jpg = os.path.realpath(args.jpg)
     args.pdf = os.path.realpath(args.pdf)
-
-    print(args)
 
     with open(args.jpg, 'rb') as jpgh, open(args.pdf, 'rb') as pdfh:
         with open(args.o, 'wb') as fh:
